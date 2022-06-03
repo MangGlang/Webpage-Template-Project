@@ -37,7 +37,8 @@ NAV
   margin: 0 auto;
   box-sizing: border-box;
   position: relative;
-  max-width: 1280px;
+  /* max-width: 1280px; */
+  max-width: 1281px;
 }
 
 .nav__container {
