@@ -52,10 +52,13 @@ NAV
   margin: 0 0 0 0;
 }
 
+.nav__logo img {
+  margin: 0 12.5px 0 0;
+}
+
 img {
   width: 100%;
   height: 100%;
-  margin: 0 12.5px 0 0;
 }
 
 ul {
@@ -253,7 +256,8 @@ input {
 
 .row {
   width: 100%;
-  max-width: 1024px;
+  /* max-width: 1024px; */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -263,7 +267,7 @@ input {
   align-items: center;
 }
 
-.feature__heading {
+.heading {
   margin-bottom: 16px;
   font-weight: 700;
   font-size: 16px;
@@ -326,4 +330,40 @@ input {
   color: #7c8ba1;
   font-size: 16px;
   font-weight: 500;
+}
+
+/* Quality section */
+
+.quality__wrapper {
+  display: flex;
+}
+
+.quality__info {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 2);
+  padding: 32px 0;
+}
+
+.quality__header {
+  font-weight: 900;
+  color: #243e63;
+  font-size: 48px;
+  max-width: 550px;
+}
+
+.quality__img--wrapper {
+  display: flex;
+  width: calc(100% / 2);
+  border: 1px solid #e5e7eb;
+}
+
+.buttn {
+  padding: 12px 32px;
+  border-radius: 9999px;
+  border: none;
+  background-color: rgba(100, 21, 255);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
