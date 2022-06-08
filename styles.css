@@ -367,3 +367,32 @@ input {
   text-decoration: none;
   font-weight: 600;
 }
+
+/* Steps section */
+
+.steps__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps__img--wrapper {
+  display: flex;
+  width: calc(100% / 2);
+  margin: 40px 48px 0 0;
+}
+
+.steps__info {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 2);
+  padding: 32px 0;
+  margin: 0 0 120px 0;
+}
+
+.steps__header {
+  font-weight: 900;
+  color: #243e63;
+  font-size: 48px;
+  max-width: 550px;
+}
