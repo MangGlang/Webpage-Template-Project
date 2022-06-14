@@ -227,17 +227,9 @@ input {
   /* bottom: 0; */
 }
 
-.menu__img--wrapper {
-  width: 60%;
-}
-
-.menu__img {
-  margin: 0 auto;
-  width: 768px;
-}
-
 .menu__brands--img {
   margin-top: 16px;
+  opacity: 0.5;
 }
 
 .menu__customers {
@@ -248,10 +240,25 @@ input {
   color: #a0aec0;
 }
 
+.menu__img--wrapper {
+  width: 60%;
+}
+
+.menu__img {
+  margin: 0 auto;
+  width: 768px;
+}
+
+.menu__shape {
+  height: 264px;
+  z-index: -1000;
+}
+
 /* Features Page */
 
 .container {
   padding: 120px 0;
+  margin: 0 154px 0 154px;
 }
 
 .row {
@@ -271,7 +278,7 @@ input {
   margin-bottom: 16px;
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.4px;
 }
 
 .feature__header {
@@ -524,6 +531,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* letter-spacing: 1px; */
 }
 
 .pricing__header {
@@ -534,21 +542,61 @@ input {
 
 .plans__container {
   display: flex;
-  flex-wrap: wrap;
-  padding: 8px 32px 0;
-  max-width: 1280px;
-  /* box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
-  border: 1px solid #e5e7eb;
-  box-sizing: border-box;
+  /* margin: 0 154px 0 154px; */
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+  /* border: 1px solid #e5e7eb; */
+  /* box-sizing: border-box; */
 }
 
 .plan__wrapper {
+  box-sizing: border-box;
+  width: calc(100% / 3);
+  max-width: 384px;
   display: flex;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   margin: 0px;
   flex-direction: column;
   align-items: center;
-  /* margin: 0 32px 0 0; */
+  justify-content: center;
+  /* border: 1px solid #e5e7eb; */
+  border-radius: 8px;
+  /* padding: 8px 0 0 0; */
+  margin: 32px 40px 0 0;
+
+  /* box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
+}
+
+.plan__wrapper--Two {
+  padding-top: 8px;
+  background-color: rgba(100, 21, 255);
+  background-image: linear-gradient(
+    135deg,
+    rgb(76, 81, 191) 0%,
+    rgb(102, 126, 234) 100%
+  );
+  color: white;
+}
+
+.plan__strip {
+  height: 8px;
+  width: 100%;
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.plan__strip--color {
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
+  );
 }
 
 .plan__heading--wrapper {
@@ -558,21 +606,24 @@ input {
   width: 100%;
   padding: 28px 0;
   box-sizing: border-box;
-  /* border-bottom: 1px solid #e5e7eb; */
 }
 
 .plan__header {
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 .plan__gray--weight {
   color: #96a7c0;
-  margin: 24px 0 0 0;
+  margin: 20px 0 0 0;
   max-width: 560px;
   line-height: 1.57;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1.5px;
+}
+
+.plan__weight--Two {
+  color: white;
 }
 
 .plan__body--wrapper {
@@ -581,18 +632,34 @@ input {
   flex-direction: column;
   align-items: center;
   margin: 0 -10px;
-  border-top: 1px solid #e5e7eb;
+  padding: 32px 32px;
+  border-top: 2px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
 }
 
-.plan__body--wrapper {
-  padding: 32px 32px;
+.plan__body--Two {
+  /* padding-top:  */
+  border-top: 2px solid rgb(102, 126, 234);
+  border-bottom: 2px solid rgb(102, 126, 234);
+}
+
+.plan__body--Two {
+  color: white;
+}
+
+.plan__body--header {
+  font-size: 20px;
 }
 
 .plans__gray--para {
   margin: 24px 0 0 0;
   color: rgb(110, 110, 110);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
+}
+
+.plan__para--Two {
+  color: white;
 }
 
 .plan__end--wrapper {
@@ -600,20 +667,44 @@ input {
   justify-content: center;
   padding: 32px 64px;
   width: 100%;
-  border-bottom: 1px solid #e5e7eb;
+  /* border-bottom: 1px solid #e5e7eb; */
 }
 
 .plan__end--button {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 12px 32px;
   border-radius: 9999px;
   border: none;
   background-color: rgba(100, 21, 255);
   color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   width: 100%;
-  max-width: 172px;
+  max-width: 190px;
+  /* height: 100%; */
+  height: 52px;
+}
+
+.plan__button--color--One {
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+
+.plan__button--color--Two {
+  background: white;
+  color: #6415ff;
+}
+
+.plan__button--color--Three {
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
+  );
 }
