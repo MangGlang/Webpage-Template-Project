@@ -193,7 +193,7 @@ p {
 .menu__info {
   display: flex;
   position: relative;
-  /* justify-content: center; */
+  justify-content: center;
   flex-direction: column;
   width: 40%;
   margin: 0 28px 0 0;
@@ -349,6 +349,7 @@ input {
 .services {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1024px;
 }
 
 .service {
@@ -394,12 +395,16 @@ input {
   right: 0px;
   bottom: 0px;
   width: 256px;
+  z-index: -10;
+  opacity: 0.25;
+  transform: translateX(50%) translateY(30%);
 }
 
 /* Quality section */
 
 .quality__wrapper {
   display: flex;
+  position: relative;
 }
 
 .quality__info {
@@ -407,6 +412,7 @@ input {
   flex-direction: column;
   width: calc(100% / 2);
   padding: 32px 0;
+  justify-content: center;
 }
 
 .quality__header {
@@ -416,10 +422,25 @@ input {
   max-width: 550px;
 }
 
+.quality__btn {
+  max-width: 200px;
+}
+
 .quality__img--wrapper {
   display: flex;
   width: calc(100% / 2);
   border: 1px solid #e5e7eb;
+}
+
+.square__icon {
+  z-index: -10;
+  width: 80px;
+  bottom: 0;
+  right: 0;
+  transform: translateX(50%) translateY(50%);
+  position: absolute;
+  color: rgba(100, 21, 255);
+  fill: currentColor;
 }
 
 .buttn {
@@ -431,6 +452,11 @@ input {
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
+  transition: all 300ms ease;
+}
+
+.buttn:hover {
+  background-color: #4a13b8;
 }
 
 /* Steps section */
