@@ -71,7 +71,7 @@ NAV
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
@@ -305,7 +305,7 @@ input {
 
 .container {
   padding: 120px 0;
-  margin: 0 154px 0 154px;
+  /* margin: 0 154px 0 154px; */
 }
 
 .row {
@@ -392,12 +392,12 @@ input {
 
 .side__shape {
   position: absolute;
-  right: 0px;
+  right: -6.89px;
   bottom: 0px;
   width: 256px;
   z-index: -10;
   opacity: 0.25;
-  transform: translateX(50%) translateY(30%);
+  transform: translateX(10%) translateY(30%);
 }
 
 /* Quality section */
@@ -444,7 +444,7 @@ input {
 }
 
 .buttn {
-  padding: 12px 32px;
+  padding: 14px 32px;
   border-radius: 9999px;
   border: none;
   background-color: rgba(100, 21, 255);
@@ -465,6 +465,7 @@ input {
   display: flex;
   /* margin-right: 48px; */
   margin-top: 32px;
+  position: relative;
 }
 
 .steps__img--wrapper {
@@ -472,6 +473,7 @@ input {
   display: flex;
   width: calc(100% / 2);
   padding-top: 64px;
+  position: relative;
   /* padding-bottom: 24px; */
   /* margin: 0 0 480px 0; */
 }
@@ -529,6 +531,18 @@ input {
   font-weight: 500;
   line-height: 2;
   color: #718096;
+}
+
+.steps__square--icon {
+  z-index: -10;
+  width: 150px;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  transform: translateX(-152%) translateY(50%);
+  position: absolute;
+  color: rgb(234, 223, 255);
+  fill: currentColor;
 }
 
 /* Values section */
