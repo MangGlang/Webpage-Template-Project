@@ -27,7 +27,7 @@ NAV
 }
 
 .svg {
-  z-index: 2;
+  z-index: -1;
 }
 
 .nav {
@@ -640,6 +640,7 @@ input {
 
 .plans__container {
   display: flex;
+  position: relative;
   /* margin: 0 154px 0 154px; */
   /* flex-wrap: wrap; */
   /* width: 100%; */
@@ -648,6 +649,7 @@ input {
 }
 
 .plan__wrapper {
+  /* z-index: 1; */
   box-sizing: border-box;
   width: calc(100% / 3);
   max-width: 384px;
@@ -664,6 +666,11 @@ input {
 
   /* box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
+}
+
+.plan__wrapper--One {
+  /* z-index: 1; */
+  position: relative;
 }
 
 .plan__wrapper--Two {
@@ -762,6 +769,7 @@ input {
 
 .plan__end--wrapper {
   display: flex;
+  z-index: 10;
   justify-content: center;
   padding: 32px 64px;
   width: 100%;
@@ -805,4 +813,13 @@ input {
     rgb(245, 101, 101) 0%,
     rgb(254, 178, 178) 100%
   );
+}
+
+.heart__shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  /* opacity: 0.25; */
+  transform: translateX(-50%) translateY(50%);
 }
