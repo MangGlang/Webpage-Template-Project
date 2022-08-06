@@ -819,7 +819,7 @@ input {
   left: 0;
   width: 256px;
   height: 256px;
-  opacity: 0.25;
+  /* opacity: 0.25; */
   /* z-index: -9; */
   transform: translateX(-50%) translateY(50%);
   fill: rgba(255, 180, 188, 1);
