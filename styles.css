@@ -820,6 +820,7 @@ input {
   width: 256px;
   height: 256px;
   /* opacity: 0.25; */
+  /* opacity =  */
   /* z-index: -9; */
   transform: translateX(-50%) translateY(50%);
   fill: rgba(255, 180, 188, 1);
