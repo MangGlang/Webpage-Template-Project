@@ -857,4 +857,28 @@ input {
   display: flex;
 }
 
-.testimonial__
+.testimonial__img--wrapper {
+  display: flex;
+
+  width: calc(100% / 2);
+  padding: 128px 0 0 0;
+}
+
+.testimonial__info {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 2);
+  padding: 0 0 0 48px;
+}
+
+.testimonial__header {
+  font-weight: 900;
+  color: #243e63;
+  font-size: 48px;
+}
+
+/* .slick__slider */
+
+.client__ratings {
+  color: #faaa39ef;
+}
