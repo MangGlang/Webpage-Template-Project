@@ -13,9 +13,7 @@ NAV
   font-family: Inter, system-ui;
 }
 
-/* html {
-
-} */
+/* html { } */
 
 #landing {
   position: relative;
@@ -877,8 +875,81 @@ input {
   font-size: 48px;
 }
 
-/* .slick__slider */
+.slick__slider {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .slick {
+  display: flex;
+  justify-content: space-between;
+} */
 
 .client__ratings {
   color: #faaa39ef;
+}
+
+.client__report--header {
+  font-size: 20px;
+  font-weight: 700;
+  color: #243e63;
+  padding: 16px 0px;
+}
+
+.client__report {
+  color: rgba(74, 85, 104);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-bottom: 32px;
+}
+
+.client__info {
+  display: flex;
+  /* width: 100px;
+  height: 100px;
+  border-radius: 50%; */
+}
+.client-info__picture--mask {
+  /* width: 100px;
+  height: 100px; */
+}
+
+.client__info--picture {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-right: 24px;
+}
+
+.client__name {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.client__position {
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.slick__button--wrapper {
+  display: flex;
+  right: 0;
+  align-items: center;
+}
+
+.divider {
+  border-right-width: 1px;
+}
+
+.slick__button--wrapper {
+  border-radius: 20px;
+}
+
+.slick-track {
+  display: flex;
+  flex-direction: column;
 }
