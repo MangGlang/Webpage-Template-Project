@@ -19,6 +19,18 @@ NAV
   position: relative;
 }
 
+/* headers for efficiency */
+
+.from__left {
+  grid-column: 2/3;
+  transform: translateX(-50%);
+}
+
+.from__right {
+  grid-column: 3/4;
+  transform: translateX(50%);
+}
+
 .full__padding {
   padding: 32px;
   z-index: 2;
@@ -224,6 +236,11 @@ p {
   max-width: 480px;
 }
 
+.menu__email input:hover {
+  border-color: rgb(160, 174, 192);
+  transition: all 300ms ease;
+}
+
 input {
   max-width: 640px;
   display: flex;
@@ -238,6 +255,7 @@ input {
   border: 2px solid #e5e7eb;
   font-weight: 500;
   font-size: 16px;
+  color: rgb(79, 80, 84);
 }
 
 .menu__btn {
