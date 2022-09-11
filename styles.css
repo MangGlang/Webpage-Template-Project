@@ -21,16 +21,6 @@ NAV
 
 /* headers for efficiency */
 
-.from__left {
-  grid-column: 2/3;
-  transform: translateX(-50%);
-}
-
-.from__right {
-  grid-column: 3/4;
-  transform: translateX(50%);
-}
-
 .full__padding {
   padding: 32px;
   z-index: 2;
@@ -998,4 +988,24 @@ input {
 .slick-track {
   display: flex;
   flex-direction: column;
+}
+
+/* Animations */
+.from__left {
+  grid-column: 2/3;
+  transform: translateX(-50%);
+}
+
+.from__right {
+  grid-column: 3/4;
+  transform: translateX(50%);
+}
+
+.from__left,
+.from__right {
+  transition: all 300ms ease;
+}
+.from__left.appear,
+.from__right.appear {
+  transform: translateX(0);
 }
