@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 
-/* 
-
-NAV 
-
-*/
+/* NAVIGATION BAR */
 
 * {
   padding: 0;
@@ -991,7 +987,7 @@ input {
 }
 
 /* Animations */
-.from__left {
+/* .from__left {
   grid-column: 2/3;
   transform: translateX(-50%);
 }
@@ -1008,4 +1004,63 @@ input {
 .from__left.appear,
 .from__right.appear {
   transform: translateX(0);
+} */
+
+/* try and redo headers for efficiency */
+
+/* FOOTER */
+footer {
+  background-color: #6415ff;
+  height: 55vh;
+  margin: 16px -32px -32px -32px;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* width: calc(100% / 5); */
+  align-items: center;
+}
+
+.footer__link--container {
+  display: flex;
+  flex-direction: column;
+  transition: all 300ms ease;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+
+h5 {
+  color: white;
+  font-size: 16px;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+
+.footer__link--primary {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 8px;
+  border-bottom: 2px solid #6415ff;
+  padding-bottom: 2px;
+  transition: all 300ms ease;
+  display: inline-block;
+  /* <a> tag = inline element; cannot have top/bottom margin
+  solved by adding display: inline-block; */
+}
+
+.footer__link--primary:hover {
+  color: white;
+  border-color: white;
 }

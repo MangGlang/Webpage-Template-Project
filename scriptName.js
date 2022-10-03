@@ -1,25 +1,25 @@
-const sliders = document.querySelectorAll(".slide__in");
+// const sliders = document.querySelectorAll(".slide__in");
 
-const appearOptions = {
-    threshhold: 0;
+// const appearOptions = {
+//     threshhold: 0;
 
-};
+// };
 
-const appearOnScroll = new IntersectionObserver(function (
-  entries,
-  appearOnScroll
-) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add("appear");
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-},
-appearOptions);
+// const appearOnScroll = new IntersectionObserver(function (
+//   entries,
+//   appearOnScroll
+// ) {
+//   entries.forEach((entry) => {
+//     if (!entry.isIntersecting) {
+//       return;
+//     } else {
+//       entry.target.classList.add("appear");
+//       appearOnScroll.unobserve(entry.target);
+//     }
+//   });
+// },
+// appearOptions);
 
-sliders.forEach((slider) => {
-  appearOnScroll.observe(slider);
-});
+// sliders.forEach((slider) => {
+//   appearOnScroll.observe(slider);
+// });
