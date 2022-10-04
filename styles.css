@@ -1015,6 +1015,8 @@ footer {
   background-color: #6415ff;
   margin: 16px -32px -48px -32px;
   position: relative;
+  padding-bottom: 16px;
+  color: #6415ff;
 }
 
 .footer__links {
@@ -1022,6 +1024,7 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .footer__link {
@@ -1129,4 +1132,19 @@ h5 {
   left: 0;
   transform: translateY(0%) translateX(-30%);
   z-index: 10;
+}
+
+.blob__2 {
+  opacity: 0.1;
+  position: absolute;
+  color: #130322;
+  right: 0;
+  bottom: 0;
+  /* transform: translateY(-60%) translateX(400%); */
+  width: 320px;
+  height: 320px;
+}
+
+footer {
+  /* height: 100vh; */
 }
