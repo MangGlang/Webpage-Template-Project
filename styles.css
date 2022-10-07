@@ -1191,6 +1191,7 @@ footer {
   }
 
   .menu__brands--img {
+    /* scale image down by 0.8 */
     transform: scale(0.8);
   }
 
@@ -1213,4 +1214,7 @@ footer {
 /* Small phones, tablets, large smartphones */
 
 @media (max-width: 768px) {
+}
+
+@media (max-width: 460px) {
 }
