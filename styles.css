@@ -11,10 +11,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #landing {
-  position: relative;
+  /* position: relative; */
 }
 
 .btn__menu {
@@ -47,7 +48,7 @@ html {
   background-color: white;
   top: 0;
   left: 0;
-  width: 94vw;
+  width: 97vw;
   height: 45vh;
   z-index: 100;
   display: flex;
@@ -55,13 +56,14 @@ html {
   align-items: center;
   color: white;
   border-radius: 9px;
-  border: 1px solid rgb(235, 235, 235);
+  border: 1px solid rgb(228, 227, 227);
   /* display: none; */
   opacity: 0;
   visibility: hidden;
   /* preparing for transition-sliding in  */
   left: 100%;
   transition: all 300ms ease;
+  margin: 14px;
 }
 
 /* when the menu is clicked on//exists, go to 
@@ -72,16 +74,13 @@ the burger menu on screen */
   visibility: visible;
   opacity: 1;
   left: 0;
-  animation: animate-burger-menu 800ms 200ms backwards;
+  animation: animate-burger-menu 400ms 200ms backwards;
 }
 
-/* .menu--open.is-active {
-  left: 0;
-} */
-
 .menu--open {
-  max-height: 45vh;
+  max-height: 50vh;
   overflow-y: hidden;
+  overflow-x: hidden;
   /* targets the class, and when menu is opened, caps
   the height which prevents you from scrolling out of 
   the burger menu. */
@@ -263,7 +262,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 96px 0 96px 0;
+  padding: 96px 0 44px 0;
   z-index: 99;
   position: relative;
 }
@@ -428,6 +427,7 @@ input {
 
 #features {
   position: relative;
+  animation: fade-right 600ms 400ms backwards;
 }
 
 .features__wrapper {
@@ -573,6 +573,10 @@ input {
 }
 
 /* Steps section */
+
+#steps {
+  animation: fade-right 600ms 400ms backwards;
+}
 
 .steps__wrapper {
   display: flex;
@@ -1333,4 +1337,42 @@ footer {
 }
 
 @media (max-width: 460px) {
+}
+
+/* Animations */
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+#landing,
+#quality,
+#values,
+#testimonials {
+  animation: fade-left 600ms 400ms backwards;
+}
+
+#features,
+#steps,
+#pricing,
+footer {
+  animation: fade-right 600ms 400ms backwards;
 }
