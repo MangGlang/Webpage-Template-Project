@@ -1,25 +1,18 @@
-// const sliders = document.querySelectorAll(".slide__in");
+function openMenu() {
+  document.body.classList += " menu--open";
+  // add a class to the body that notifies that the
+  // menu is open. Targets the body, which targets the class,
+  // which adds the identifier
+}
 
-// const appearOptions = {
-//     threshhold: 0;
+function closeMenu() {
+  document.body.classList.remove("menu--open");
+}
 
-// };
+//
+// const btn__menu = document.querySelector(".btn__menu");
+// const menu__backdrop = document.querySelector(".menu__backdrop");
 
-// const appearOnScroll = new IntersectionObserver(function (
-//   entries,
-//   appearOnScroll
-// ) {
-//   entries.forEach((entry) => {
-//     if (!entry.isIntersecting) {
-//       return;
-//     } else {
-//       entry.target.classList.add("appear");
-//       appearOnScroll.unobserve(entry.target);
-//     }
-//   });
-// },
-// appearOptions);
-
-// sliders.forEach((slider) => {
-//   appearOnScroll.observe(slider);
+// btn__menu.addEventListener("click", function () {
+//   menu__backdrop.classList.toggle("is-active");
 // });

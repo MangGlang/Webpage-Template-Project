@@ -17,6 +17,101 @@ html {
   position: relative;
 }
 
+.btn__menu {
+  background-color: transparent;
+  font-size: 30px;
+  text-align: center;
+  border: none;
+  color: rgb(20, 32, 45);
+  display: none;
+}
+
+@keyframes animate-burger-menu {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.menu__backdrop {
+  /* other elements are positioned based on this backdrop,
+  but we don't want that, so we position absolute to 
+  prevent other elements to be positioned relative to 
+  this backdrop */
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 94vw;
+  height: 45vh;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 9px;
+  border: 1px solid rgb(235, 235, 235);
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  /* preparing for transition-sliding in  */
+  left: 100%;
+  transition: all 300ms ease;
+}
+
+/* when the menu is clicked on//exists, go to 
+the menu backdrop and display flex; which displays 
+the burger menu on screen */
+.menu--open .menu__backdrop {
+  /* display: flex; */
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+  animation: animate-burger-menu 800ms 200ms backwards;
+}
+
+/* .menu--open.is-active {
+  left: 0;
+} */
+
+.menu--open {
+  max-height: 45vh;
+  overflow-y: hidden;
+  /* targets the class, and when menu is opened, caps
+  the height which prevents you from scrolling out of 
+  the burger menu. */
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 12px 0;
+  /* font-size: 16px; */
+  text-decoration: none;
+}
+
+.btn__menu--close {
+  position: absolute;
+  /* transform: scale(0.8); */
+  /* width: 8px; */
+  transform: scale(0.6);
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  color: rgb(20, 32, 45);
+}
+
 /* headers for efficiency */
 
 .full__padding {
@@ -68,6 +163,10 @@ html {
   color: rgb(100, 21, 255);
 }
 
+.no-cursor {
+  cursor: not-allowed;
+}
+
 img {
   max-width: 100%;
   /* height: 100%; */
@@ -106,6 +205,12 @@ li {
   padding-bottom: 4px;
   border-bottom: 2px solid white;
   transition: all 300ms ease;
+}
+
+.menu__link {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .nav__link:hover {
@@ -1208,6 +1313,17 @@ footer {
 
   .menu__img {
     margin: 0 auto;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .btn__menu {
+    display: block;
+    /* re-shows burger menu only when resolution
+    is set to 1024px. Before, display was set to "none"
+    in order to correctly use this property. */
   }
 }
 
