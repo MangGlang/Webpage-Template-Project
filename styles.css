@@ -1307,6 +1307,8 @@ footer {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .menu__brands {
@@ -1377,7 +1379,9 @@ footer {
   .service {
     width: 100%;
   }
-
+  /* .menu__para {
+    max-width: 400px;
+  } */
   .quality__wrapper {
     display: flex;
     flex-wrap: wrap;
