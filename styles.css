@@ -78,7 +78,7 @@ the burger menu on screen */
 }
 
 .menu--open {
-  max-height: 50vh;
+  max-height: 46vh;
   overflow-y: hidden;
   overflow-x: hidden;
   /* targets the class, and when menu is opened, caps
@@ -524,6 +524,7 @@ input {
   width: calc(100% / 2);
   padding: 32px 0;
   justify-content: center;
+  margin-right: 64px;
 }
 
 .quality__header {
@@ -541,6 +542,12 @@ input {
   display: flex;
   width: calc(100% / 2);
 }
+
+.quality__img--wrap {
+  display: flex;
+  align-items: center;
+}
+
 .quality__img {
   border: 1px solid #e5e7eb;
 }
@@ -548,9 +555,10 @@ input {
 .square__icon {
   z-index: -10;
   width: 80px;
+  height: 80px;
   bottom: 0;
   right: 0;
-  transform: translateX(50%) translateY(46.7%);
+  transform: translateX(50%) translateY(40.7%);
   position: absolute;
   color: rgba(100, 21, 255);
   fill: currentColor;
@@ -1262,12 +1270,13 @@ footer {
 /* Responsiveness */
 @media (max-width: 1280px) {
   .menu__header {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .menu__para {
     font-size: 16px;
     font-weight: 500;
+    max-width: 480px;
   }
 
   .menu__img {
@@ -1276,7 +1285,7 @@ footer {
   }
 
   .square__icon {
-    transform: translateY(25%) translateX(42%);
+    transform: translateY(24%) translateX(42%);
   }
 
   .steps__square--icon {
@@ -1284,7 +1293,16 @@ footer {
     transform: translateX(-140%) translateY(40%);
   }
 }
-
+@media (max-width: 1158px) {
+  .square__icon {
+    transform: translateY(-35%) translateX(42%);
+  }
+}
+@media (max-width: 1081px) {
+  .square__icon {
+    transform: translateY(-70%) translateX(42%);
+  }
+}
 @media (max-width: 1024px) {
   .menu__info {
     width: 100%;
@@ -1329,11 +1347,23 @@ footer {
     is set to 1024px. Before, display was set to "none"
     in order to correctly use this property. */
   }
+
+  .service {
+    width: 50%;
+  }
 }
 
+@media (max-width: 980px) {
+  .square__icon {
+    transform: translateY(-90%) translateX(42%);
+  }
+}
 /* Small phones, tablets, large smartphones */
 
 @media (max-width: 768px) {
+  .service {
+    width: 100%;
+  }
 }
 
 @media (max-width: 460px) {
