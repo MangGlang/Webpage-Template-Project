@@ -1431,11 +1431,12 @@ footer {
   }
 
   .steps__img--wrapper {
-    margin-left: 60px;
+    margin-left: 4px;
   }
 
   .steps__info {
     margin-top: 48px;
+    margin-left: 0px;
   }
 
   .steps__header,
